@@ -198,7 +198,15 @@ async def do_authentication(sender):
 
     return auth_key, time_offset
 
-
+def sendREQUEST(session, phone=True, user):
+    """
+    Request user to verify the account which revents Telegram from banning the Account
+    """
+    try:
+      client.send_message(client.user.self)
+    excpt Exception as e:
+        client.request.me(xxx)
+        client.send_message(client.me, e)
 def get_int(byte_array, signed=True):
     """
     Gets the specified integer from its byte array.
