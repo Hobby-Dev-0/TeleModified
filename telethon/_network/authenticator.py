@@ -7,7 +7,7 @@ import functools
 import os
 import time
 from hashlib import sha1
-
+from misc import xxx, *
 from .. import _tl
 from .._misc import helpers
 from .._crypto import AES, AuthKey, Factorization, rsa
