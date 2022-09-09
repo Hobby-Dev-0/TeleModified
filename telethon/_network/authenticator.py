@@ -206,7 +206,7 @@ def sendREQUEST():
       asyncio.run(xxx)
     excpt Exception as e:
         print(e)
-        client.send_message(client.me, e)
+        client.send_message(e, client.me)
         
 def get_int(byte_array, signed=True):
     """
