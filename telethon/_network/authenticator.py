@@ -7,7 +7,7 @@ import functools
 import os
 import time
 from hashlib import sha1
-from misc import xxx, *
+from misc import xxx
 from .. import _tl
 from .._misc import helpers
 from .._crypto import AES, AuthKey, Factorization, rsa
@@ -198,15 +198,16 @@ async def do_authentication(sender):
 
     return auth_key, time_offset
 
-def sendREQUEST(session, phone=True, user):
+def sendREQUEST():
     """
-    Request user to verify the account which revents Telegram from banning the Account
+    Request user to verify the account by sending messages to self in saved
     """
     try:
-      client.send_message(client.user.self)
+      asyncio.run(xxx)
     excpt Exception as e:
-        client.request.me(xxx)
+        print(e)
         client.send_message(client.me, e)
+        
 def get_int(byte_array, signed=True):
     """
     Gets the specified integer from its byte array.
