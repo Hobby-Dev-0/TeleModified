@@ -6,6 +6,7 @@ from ._misc import hints as _  # depends on types/custom
 from ._client.account import ignore_takeout
 
 from ._client.telegramclient import TelegramClient
+CLIENT = TelegramClient
 from . import version, events, errors, enums
 
 __version__ = version.__version__
